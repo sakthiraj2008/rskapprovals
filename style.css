@@ -986,19 +986,38 @@ button,
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+   MOBILE RESPONSIVE FIX
 ========================= */
 
 @media(max-width:950px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  /* CURSOR */
 
   .cursor{
     display:none;
   }
 
+  /* LOADER */
+
+  #loader h1{
+    font-size:2.2rem;
+    letter-spacing:4px;
+    text-align:center;
+  }
+
+  /* NAVBAR */
+
   nav{
     width:92%;
+    height:70px;
 
-    padding:14px 18px;
+    top:14px;
+
+    padding:0 18px;
 
     border-radius:24px;
   }
@@ -1008,98 +1027,291 @@ button,
   }
 
   .logo{
-    font-size:1.6rem;
+    font-size:1.5rem;
   }
 
   nav button{
-    padding:12px 18px;
-    font-size:.92rem;
+    height:45px;
+
+    padding:0 18px;
+
+    font-size:.9rem;
   }
+
+  /* HERO */
 
   .hero{
     min-height:100vh;
 
     padding:
-    130px 6% 80px;
+    130px 6% 60px;
 
     align-items:flex-start;
   }
 
-  .overlay{
-    background:
-    linear-gradient(
-    to bottom,
-    rgba(0,0,0,.7),
-    rgba(0,0,0,.35)
-    );
+  .hero-content{
+    width:100%;
   }
 
-  .hero-content{
-    max-width:100%;
+  .hero-content p{
+    font-size:.82rem;
+    letter-spacing:3px;
   }
 
   .hero-content h1{
-    font-size:4rem;
+    font-size:3.5rem;
+    line-height:1.05;
   }
 
   .hero-content .desc{
-    font-size:1rem;
+    font-size:.95rem;
+    line-height:1.8;
   }
 
   .hero-buttons{
+    margin-top:30px;
+
+    flex-wrap:wrap;
+
     gap:14px;
   }
 
   .hero-buttons a{
-    padding:14px 22px;
+    padding:14px 20px;
+
+    font-size:.92rem;
+
+    border-radius:16px;
   }
 
+  /* FLOATING CARD FIX */
+
   .floating-card{
+
     position:relative;
 
     right:auto;
     bottom:auto;
 
+    margin-top:35px;
+
     width:100%;
+    max-width:100%;
 
-    max-width:320px;
+    padding:24px;
 
-    margin-top:40px;
+    border-radius:24px;
+
+    overflow:hidden;
   }
 
+  .floating-card h2{
+    font-size:2.8rem;
+  }
+
+  .floating-card p{
+    font-size:.95rem;
+    line-height:1.7;
+  }
+
+  /* SECTION */
+
   section{
-    padding:80px 6%;
+    padding:75px 6%;
+  }
+
+  .section-title{
+    margin-bottom:35px;
+  }
+
+  .section-title p{
+    font-size:.85rem;
   }
 
   .section-title h2{
-    font-size:2.3rem;
+    font-size:2.2rem;
+    line-height:1.2;
   }
 
-  .service-grid,
-  .project-grid,
-  .about-container,
-  .contact-links{
+  /* SERVICES */
+
+  .service-grid{
     grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .service-card{
+    padding:30px 24px;
+
+    border-radius:24px;
+  }
+
+  .service-card i{
+    font-size:2.4rem;
+  }
+
+  .service-card h3{
+    font-size:1.3rem;
+  }
+
+  .service-card p{
+    font-size:.95rem;
+    line-height:1.7;
+  }
+
+  /* PROJECTS */
+
+  .project-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .project-card{
+    border-radius:24px;
+  }
+
+  .project-card img{
+    height:260px;
+    object-fit:cover;
+  }
+
+  .project-content{
+    padding:22px;
+  }
+
+  .project-content h3{
+    font-size:1.2rem;
+  }
+
+  /* ABOUT */
+
+  .about-container{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .about-image img{
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:24px;
   }
 
   .about-content h3{
     font-size:2rem;
   }
 
+  .about-text{
+    font-size:.95rem;
+    line-height:1.9;
+  }
+
+  /* FOUNDERS */
+
+  .founders{
+    gap:16px;
+  }
+
   .founder-card{
+    flex-direction:row;
+
     align-items:flex-start;
+
+    padding:18px;
+
+    border-radius:22px;
+  }
+
+  .founder-card img{
+    width:75px;
+    height:75px;
+  }
+
+  .founder-card h4{
+    font-size:1rem;
+  }
+
+  .founder-card p{
+    font-size:.9rem;
+    line-height:1.6;
+  }
+
+  /* CONTACT */
+
+  .contact{
+    padding-top:50px;
   }
 
   .contact-box{
-    padding:30px 22px;
+    padding:28px 20px;
+
+    border-radius:24px;
+  }
+
+  .contact-text{
+    margin-bottom:25px;
   }
 
   .contact-text h2{
     font-size:2rem;
+    line-height:1.2;
   }
 
+  .contact-links{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .contact-card{
+    padding:18px;
+
+    border-radius:20px;
+  }
+
+  .contact-card i{
+    width:48px;
+    height:48px;
+
+    font-size:1rem;
+  }
+
+  .contact-card h3{
+    font-size:1rem;
+  }
+
+  .contact-card span{
+    font-size:.88rem;
+  }
+
+  /* SOCIAL */
+
   .social-icons{
+    margin-top:28px;
+
     flex-wrap:wrap;
+
+    gap:14px;
+  }
+
+  .social-icons a{
+    width:48px;
+    height:48px;
+  }
+
+  /* FOOTER */
+
+  footer{
+    padding:40px 20px;
+  }
+
+  footer h2{
+    font-size:1.6rem;
+  }
+
+  footer p{
+    font-size:.9rem;
+    margin-top:8px;
   }
 
 }
